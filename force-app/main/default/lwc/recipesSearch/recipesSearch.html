@@ -1,0 +1,56 @@
+<template>
+    <lightning-card  title="Search Recipes">
+        <div class="slds-grid slds-gutters slds-var-m-around_large">
+            <div class="slds-col">
+                <span>
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-input type="text" label="Recipes name" accept="text" required onchange={handleTextChange}></lightning-input>
+                    </div>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-combobox
+                        name="Diet"
+                        label="Diet"
+                        value={value}
+                        placeholder="Select Diet"
+                        options={options}
+                        onchange={handleChange} required></lightning-combobox>
+                    </div>
+                    
+                </span>
+            </div>
+            <!-- <div class="slds-col">
+                <span>
+                    <div class="slds-form-element slds-p-around_medium lgc-bg">
+                        <label class="slds-form-element__label" for="select-01">Select Label</label>
+                        <div class="slds-form-element__control">
+                            <select class="slds-select" id="select-01" multiple="">
+                                <option>Option One</option>
+                                <option>Option Two</option>
+                                <option>Option Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="slds-col">
+                <span>4</span>
+            </div> -->
+            <!-- <div class="slds-col">
+                <span>
+                    
+                </span>  
+            </div> -->
+           
+        </div>
+        <div class="slds-var-m-around_large" style="margin-left: 45px;">
+            <lightning-button variant="brand" label="Search Recipes" title="Search Recipes" onclick={handleClick} disabled={disabled} class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>  
+</template>
